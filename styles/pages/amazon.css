@@ -154,3 +154,18 @@
   padding: 8px;
   border-radius: 50px;
 }
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Apply the animation to the added message element */
+.added-to-cart-visible {
+  opacity: 1;
+  animation: fadeOut 1.5s ease-in-out 2s forwards;
+  /* 1.5s for the fade-out duration, ease-in-out for a smooth effect, and 3s delay before starting */
+}
