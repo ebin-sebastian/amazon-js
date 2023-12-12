@@ -166,6 +166,6 @@
 /* Apply the animation to the added message element */
 .added-to-cart-visible {
   opacity: 1;
-  animation: fadeOut 1.5s ease-in-out 2s forwards;
+  animation: fadeOut 1.5s ease-in-out 1.5s forwards;
   /* 1.5s for the fade-out duration, ease-in-out for a smooth effect, and 3s delay before starting */
 }
