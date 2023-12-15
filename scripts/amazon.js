@@ -69,16 +69,11 @@ function updateCartQuantity(){
 
         cart.forEach((cartItem) => {
           cartQuantity += cartItem.quantity;
-          productId=cartItem.productId;
         });
 
         document.querySelector(".js-cart-quantity").innerHTML = cartQuantity;
 
-        const addedMessage = document.querySelector(
-          `.js-added-to-cart-${productId}`
-        );
-
-        addedMessage.classList.add("added-to-cart-visible");
+        
 }
 
 document.querySelectorAll(".js-add-to-cart").forEach((button) => {
@@ -88,6 +83,11 @@ document.querySelectorAll(".js-add-to-cart").forEach((button) => {
     addToCart(productId);
 
     updateCartQuantity();
+    const addedMessage = document.querySelector(
+      `.js-added-to-cart-${productId}`
+    );
+
+    addedMessage.classList.add("added-to-cart-visible");
 
 
     const previousTimeoutId = addedMessageTimeouts[productId];
